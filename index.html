@@ -3,6 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Preconnect to third-party origins for faster script loading -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="preload" href="assets/images/logo.png" as="image" />
+  <meta name="description" content="Gas station in Murfreesboro – Super 9 Station. Your local Murfreesboro gas station and convenience store. Fresh food, bakery, snacks, drinks, quality fuel. Open daily. Order on DoorDash." />
+  <meta name="keywords" content="Gas Station in Murfreesboro, Murfreesboro gas station, Super 9 Station, convenience store Murfreesboro TN, fuel Murfreesboro, food menu, DoorDash, bakery, snacks, drinks" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://super9tn.com/" />
+  <meta property="og:title" content="Gas Station in Murfreesboro | Super 9 Station | Convenience Store" />
+  <meta property="og:description" content="Gas station in Murfreesboro – Super 9 Station. Your local Murfreesboro gas station and convenience store. Fresh food, quality fuel. Open daily. Order on DoorDash." />
+  <meta property="og:image" content="https://super9tn.com/assets/images/logo.png" />
+  <meta property="og:locale" content="en_US" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Gas Station in Murfreesboro | Super 9 Station | Convenience Store" />
+  <meta name="twitter:description" content="Gas station in Murfreesboro – Super 9 Station. Your local gas station and convenience store. Fresh food, quality fuel. Open daily." />
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -35,7 +53,35 @@
     src="https://www.facebook.com/tr?id=1985824572204156&ev=PageView&noscript=1"
     alt="" /></noscript>
   <!-- End Meta Pixel Code -->
-  <title>Super 9 Station | Gas & Convenience Store in Murfreesboro</title>
+  <title>Gas Station in Murfreesboro | Super 9 Station | Convenience Store</title>
+  <link rel="icon" href="assets/images/logo.png" type="image/png" />
+  <link rel="canonical" href="https://super9tn.com/" />
+  <!-- LocalBusiness schema for local SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GasStation",
+    "name": "Super 9 Station",
+    "description": "Gas station in Murfreesboro and convenience store. Fresh food, bakery, snacks, drinks, quality fuel. Open daily.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3035 New Salem Hwy B",
+      "addressLocality": "Murfreesboro",
+      "addressRegion": "TN",
+      "postalCode": "37128"
+    },
+    "telephone": "+1-615-624-7005",
+    "email": "super9station@gmail.com",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "04:00",
+      "closes": "00:00"
+    },
+    "url": "https://super9tn.com",
+    "priceRange": "$$"
+  }
+  </script>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,7 +96,7 @@
   <header class="header" id="top">
     <div class="header-inner container">
       <a href="index.html" class="logo">
-        <img src="assets/images/logo.png" alt="Super 9 Station" class="logo-img" />
+        <img src="assets/images/logo.png" alt="Super 9 Station" class="logo-img" fetchpriority="high" width="240" height="64" />
       </a>
       <nav class="nav">
         <a href="#home">Home</a>
@@ -126,19 +172,19 @@
         <div class="inside-carousel" aria-label="Inside Super 9 Station gallery">
           <div class="inside-carousel-track">
             <div class="inside-carousel-slide is-active">
-              <img src="assets/images/Inside-Super9/inside-store.png" alt="Inside Super 9 Station" />
+              <img src="assets/images/Inside-Super9/inside-store.png" alt="Inside Super 9 Station" loading="lazy" width="800" height="450" />
             </div>
             <div class="inside-carousel-slide">
-              <img src="assets/images/Inside-Super9/food-menu-banner.png" alt="Food menu at Super 9 Station" />
+              <img src="assets/images/Inside-Super9/food-menu-banner.png" alt="Food menu at Super 9 Station" loading="lazy" width="800" height="450" />
             </div>
             <div class="inside-carousel-slide">
-              <img src="assets/images/Inside-Super9/chicken-breast.png" alt="Chicken at Super 9 Station" />
+              <img src="assets/images/Inside-Super9/chicken-breast.png" alt="Chicken at Super 9 Station" loading="lazy" width="800" height="450" />
             </div>
             <div class="inside-carousel-slide">
-              <img src="assets/images/Inside-Super9/chicken-wing.png" alt="Chicken wings at Super 9 Station" />
+              <img src="assets/images/Inside-Super9/chicken-wing.png" alt="Chicken wings at Super 9 Station" loading="lazy" width="800" height="450" />
             </div>
             <div class="inside-carousel-slide">
-              <img src="assets/images/Inside-Super9/potato-wedges.png" alt="Potato wedges at Super 9 Station" />
+              <img src="assets/images/Inside-Super9/potato-wedges.png" alt="Potato wedges at Super 9 Station" loading="lazy" width="800" height="450" />
             </div>
           </div>
           <button type="button" class="inside-carousel-prev" aria-label="Previous image">‹</button>
@@ -153,7 +199,7 @@
       <div class="container">
         <h2>Food Menu</h2>
         <div class="food-menu-image-wrap">
-          <img src="assets/images/menuImage.avif" alt="Super 9 Station Food Menu" class="food-menu-image" />
+          <img src="assets/images/menuImage.avif" alt="Super 9 Station Food Menu" class="food-menu-image" loading="lazy" width="800" height="600" />
         </div>
       </div>
     </section>
@@ -197,38 +243,38 @@
       <div class="container">
         <h2>Popular Categories</h2>
         <div class="categories-grid">
-          <a href="#" class="category-card">
-            <span class="category-circle"><img src="assets/images/FreshFruits.jpg" alt="Fresh Fruits" /></span>
+          <div class="category-card">
+            <span class="category-circle"><img src="assets/images/FreshFruits.jpg" alt="Fresh Fruits" loading="lazy" width="144" height="144" /></span>
             <span class="category-label">Fresh Fruits</span>
-          </a>
-          <a href="#" class="category-card">
-            <span class="category-circle"><img src="assets/images/BakeryDelights.jpg" alt="Bakery Delights" /></span>
+          </div>
+          <div class="category-card">
+            <span class="category-circle"><img src="assets/images/BakeryDelights.jpg" alt="Bakery Delights" loading="lazy" width="144" height="144" /></span>
             <span class="category-label">Bakery Delights</span>
-          </a>
-          <a href="#" class="category-card">
-            <span class="category-circle"><img src="assets/images/Cakes.jpg" alt="Cakes" /></span>
+          </div>
+          <div class="category-card">
+            <span class="category-circle"><img src="assets/images/Cakes.jpg" alt="Cakes" loading="lazy" width="144" height="144" /></span>
             <span class="category-label">Cakes</span>
-          </a>
-          <a href="#" class="category-card">
-            <span class="category-circle"><img src="assets/images/Dairy%26Eggs.jpg" alt="Dairy &amp; Eggs" /></span>
+          </div>
+          <div class="category-card">
+            <span class="category-circle"><img src="assets/images/Dairy%26Eggs.jpg" alt="Dairy &amp; Eggs" loading="lazy" width="144" height="144" /></span>
             <span class="category-label">Dairy & Eggs</span>
-          </a>
-          <a href="#" class="category-card">
-            <span class="category-circle"><img src="assets/images/QualityMeats.jpg" alt="Quality Meats" /></span>
+          </div>
+          <div class="category-card">
+            <span class="category-circle"><img src="assets/images/QualityMeats.jpg" alt="Quality Meats" loading="lazy" width="144" height="144" /></span>
             <span class="category-label">Quality Meats</span>
-          </a>
-          <a href="#" class="category-card">
-            <span class="category-circle"><img src="assets/images/RefreshingDrinks.jpg" alt="Refreshing Drinks" /></span>
+          </div>
+          <div class="category-card">
+            <span class="category-circle"><img src="assets/images/RefreshingDrinks.jpg" alt="Refreshing Drinks" loading="lazy" width="144" height="144" /></span>
             <span class="category-label">Refreshing Drinks</span>
-          </a>
-          <a href="#" class="category-card">
-            <span class="category-circle"><img src="assets/images/Medicine.png" alt="Medicines" /></span>
+          </div>
+          <div class="category-card">
+            <span class="category-circle"><img src="assets/images/Medicine.png" alt="Medicines" loading="lazy" width="144" height="144" /></span>
             <span class="category-label">Medicines</span>
-          </a>
-          <a href="#" class="category-card">
-            <span class="category-circle"><img src="assets/images/Snacks%26Cereals.jpg" alt="Snacks &amp; Cereals" /></span>
+          </div>
+          <div class="category-card">
+            <span class="category-circle"><img src="assets/images/Snacks%26Cereals.jpg" alt="Snacks &amp; Cereals" loading="lazy" width="144" height="144" /></span>
             <span class="category-label">Snacks & Cereals</span>
-          </a>
+          </div>
         </div>
       </div>
     </section>
@@ -239,19 +285,19 @@
         <h2>Get Connected</h2>
         <div class="social-icons">
           <a href="https://www.instagram.com/super9station/" target="_blank" rel="noopener" class="social-icon-item social-icon-item--instagram">
-            <span class="social-icon-circle"><img src="assets/images/instagram.svg" alt="" /></span>
+            <span class="social-icon-circle"><img src="assets/images/instagram.svg" alt="" loading="lazy" width="77" height="77" /></span>
             <span class="social-icon-label">Instagram</span>
           </a>
           <a href="https://www.facebook.com/profile.php?id=61566549607362" target="_blank" rel="noopener" class="social-icon-item social-icon-item--facebook">
-            <span class="social-icon-circle"><img src="assets/images/facebook.svg" alt="" /></span>
+            <span class="social-icon-circle"><img src="assets/images/facebook.svg" alt="" loading="lazy" width="77" height="77" /></span>
             <span class="social-icon-label">Facebook</span>
           </a>
           <a href="https://www.tiktok.com/@super9station" target="_blank" rel="noopener" class="social-icon-item social-icon-item--tiktok">
-            <span class="social-icon-circle"><img src="assets/images/tiktok.svg" alt="" /></span>
+            <span class="social-icon-circle"><img src="assets/images/tiktok.svg" alt="" loading="lazy" width="77" height="77" /></span>
             <span class="social-icon-label">Tik-Tok</span>
           </a>
           <a href="https://www.youtube.com/channel/UCqKYD3SZLMKadkViY2DkhBQ" target="_blank" rel="noopener" class="social-icon-item social-icon-item--youtube">
-            <span class="social-icon-circle"><img src="assets/images/youtube.svg" alt="" /></span>
+            <span class="social-icon-circle"><img src="assets/images/youtube.svg" alt="" loading="lazy" width="77" height="77" /></span>
             <span class="social-icon-label">Youtube</span>
           </a>
         </div>
@@ -307,10 +353,10 @@
         </div>
         <div class="footer-col footer-col-social">
           <div class="footer-social-icons">
-            <a href="https://www.facebook.com/profile.php?id=61566549607362" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social-icon"><img src="assets/images/facebook.svg" alt="" /></a>
-            <a href="https://www.instagram.com/super9station/" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-icon"><img src="assets/images/instagram.svg" alt="" /></a>
-            <a href="https://www.tiktok.com/@super9station" target="_blank" rel="noopener" aria-label="TikTok" class="footer-social-icon"><img src="assets/images/tiktok.svg" alt="" /></a>
-            <a href="https://www.youtube.com/channel/UCqKYD3SZLMKadkViY2DkhBQ" target="_blank" rel="noopener" aria-label="YouTube" class="footer-social-icon"><img src="assets/images/youtube.svg" alt="" /></a>
+            <a href="https://www.facebook.com/profile.php?id=61566549607362" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social-icon"><img src="assets/images/facebook.svg" alt="" loading="lazy" width="22" height="22" /></a>
+            <a href="https://www.instagram.com/super9station/" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-icon"><img src="assets/images/instagram.svg" alt="" loading="lazy" width="22" height="22" /></a>
+            <a href="https://www.tiktok.com/@super9station" target="_blank" rel="noopener" aria-label="TikTok" class="footer-social-icon"><img src="assets/images/tiktok.svg" alt="" loading="lazy" width="22" height="22" /></a>
+            <a href="https://www.youtube.com/channel/UCqKYD3SZLMKadkViY2DkhBQ" target="_blank" rel="noopener" aria-label="YouTube" class="footer-social-icon"><img src="assets/images/youtube.svg" alt="" loading="lazy" width="22" height="22" /></a>
           </div>
         </div>
       </div>
@@ -322,6 +368,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
