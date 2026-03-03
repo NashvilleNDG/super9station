@@ -724,6 +724,11 @@ img {
 
 .instagram-handle:hover { text-decoration: underline; }
 
+.instagram-section behold-widget {
+  display: block;
+  margin-top: 2rem;
+}
+
 @media (max-width: 768px) {
   .instagram-section { padding: 2.5rem 0; }
   .instagram-section h2 { font-size: 1.15rem; }
