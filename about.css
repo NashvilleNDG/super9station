@@ -1,0 +1,544 @@
+/* ============================================
+   About Us Page — Super 9 Station
+   Design system & full layout
+   ============================================ */
+
+:root {
+  --about-navy: #2B2E8C;
+  --about-accent: #CD3B38;
+  --about-bg-white: #FFFFFF;
+  --about-bg-gray: #F7F7F7;
+  --about-text-dark: #333333;
+  --about-text-gray: #666666;
+  --about-placeholder-bg: #E8E8E8;
+  --about-placeholder-border: #CCCCCC;
+  --about-max-width: 1200px;
+  --about-transition: 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 110%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body.about-page {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--about-text-dark);
+  background: var(--about-bg-white);
+}
+
+.container {
+  max-width: var(--about-max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ----- Section heading accent (red underline) ----- */
+.about-section-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--about-navy);
+  text-align: center;
+  margin: 0 0 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.about-section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 4px;
+  background: var(--about-accent);
+  border-radius: 2px;
+}
+
+/* ----- Buttons ----- */
+.about-btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform var(--about-transition), box-shadow var(--about-transition), opacity var(--about-transition);
+}
+
+.about-btn-primary {
+  background: var(--about-accent);
+  color: var(--about-bg-white);
+  border: 2px solid var(--about-accent);
+}
+
+.about-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(205, 59, 56, 0.4);
+  opacity: 0.95;
+}
+
+.about-btn-outline {
+  background: transparent;
+  color: var(--about-accent);
+  border: 2px solid var(--about-accent);
+}
+
+.about-btn-outline:hover {
+  background: var(--about-accent);
+  color: var(--about-bg-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(205, 59, 56, 0.3);
+}
+
+/* ----- Section 1: Hero ----- */
+.about-hero {
+  background: var(--about-navy);
+  padding: 100px 0;
+}
+
+.about-hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-content {
+  max-width: 640px;
+}
+
+.about-hero-label {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--about-accent);
+  margin-bottom: 0.75rem;
+}
+
+.about-hero-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--about-bg-white);
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+.about-hero-subtext {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 1.5rem;
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+/* ----- Section 2: Who We Are ----- */
+.about-who {
+  padding: 80px 0;
+  background: var(--about-bg-white);
+}
+
+.about-who-text {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.05rem;
+  color: var(--about-text-dark);
+  line-height: 1.65;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.about-stat-card {
+  background: var(--about-bg-white);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  transition: transform var(--about-transition), box-shadow var(--about-transition);
+}
+
+.about-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.about-stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  color: var(--about-navy);
+}
+
+.about-stat-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.about-stat-number {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--about-navy);
+  margin-bottom: 0.25rem;
+}
+
+.about-stat-label {
+  font-size: 0.9rem;
+  color: var(--about-text-gray);
+}
+
+/* ----- Section 3: Our Story ----- */
+.section-gray {
+  background: var(--about-bg-gray);
+}
+
+.about-story {
+  padding: 80px 0;
+}
+
+.about-story-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-story-image-wrap {
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.about-story-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-story-content {
+  min-width: 0;
+}
+
+.about-story-label {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--about-accent);
+  margin-bottom: 0.5rem;
+}
+
+.about-story-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--about-navy);
+  margin: 0 0 1rem;
+  line-height: 1.25;
+}
+
+.about-story-p {
+  font-size: 1rem;
+  color: var(--about-text-dark);
+  line-height: 1.65;
+  margin: 0 0 1rem;
+}
+
+.about-story-p:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+/* ----- Section 4: What We Offer ----- */
+.about-offer {
+  padding: 80px 0;
+  background: var(--about-bg-white);
+}
+
+.about-offer-subheading {
+  text-align: center;
+  font-size: 1.05rem;
+  color: var(--about-text-gray);
+  margin: -0.5rem 0 2rem;
+}
+
+.about-offer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.about-offer-card {
+  background: var(--about-bg-white);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 28px;
+  text-align: center;
+  transition: transform var(--about-transition), box-shadow var(--about-transition);
+}
+
+.about-offer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.about-offer-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: var(--about-navy);
+}
+
+.about-offer-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.about-offer-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--about-navy);
+  margin: 0 0 0.5rem;
+}
+
+.about-offer-desc {
+  font-size: 0.9rem;
+  color: var(--about-text-gray);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ----- Section 5: Why Choose Us ----- */
+.about-why {
+  background: var(--about-navy);
+  padding: 80px 0;
+}
+
+.about-why-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--about-bg-white);
+  text-align: center;
+  margin: 0 0 2.5rem;
+}
+
+.about-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.about-why-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.about-why-check {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--about-accent);
+}
+
+.about-why-check svg {
+  width: 24px;
+  height: 24px;
+}
+
+.about-why-item-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--about-bg-white);
+  margin: 0 0 0.25rem;
+}
+
+.about-why-item-text {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ----- Section 6: Visit Us ----- */
+.about-visit {
+  padding: 80px 0;
+}
+
+.about-visit-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.about-visit-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--about-navy);
+  margin: 0 0 1.25rem;
+}
+
+.about-visit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: var(--about-text-dark);
+}
+
+.about-visit-icon {
+  flex-shrink: 0;
+  display: flex;
+  color: var(--about-navy);
+}
+
+.about-visit-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.about-visit-link {
+  color: var(--about-navy);
+  text-decoration: none;
+}
+
+.about-visit-link:hover {
+  text-decoration: underline;
+}
+
+.about-visit-content .about-btn {
+  margin-top: 1rem;
+}
+
+.about-visit-map-wrap {
+  min-width: 0;
+}
+
+.about-visit-map {
+  width: 100%;
+  height: 320px;
+  border: none;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Header & Footer: Use styles.css (home page). Do not duplicate in page-specific CSS. */
+
+/* ========== Responsive ========== */
+
+@media (max-width: 1199px) {
+  .about-hero-inner { gap: 2rem; }
+  .about-story-inner { gap: 2rem; }
+  .about-visit-inner { gap: 2rem; }
+}
+
+@media (max-width: 900px) {
+  .about-hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-hero-content { text-align: center; max-width: none; }
+  .about-hero-subtext { margin-left: auto; margin-right: auto; }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-story-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .about-story-content { text-align: center; }
+  .about-story-label { margin-left: auto; margin-right: auto; }
+
+  .about-offer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-why-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-why-item { text-align: left; }
+
+  .about-visit-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .about-visit-content { text-align: center; }
+  .about-visit-item { justify-content: center; }
+  .about-visit-map { height: 280px; }
+}
+
+@media (max-width: 768px) {
+  .about-hero { padding: 60px 0; }
+  .about-who,
+  .about-story,
+  .about-offer,
+  .about-why,
+  .about-visit { padding: 60px 0; }
+
+  .about-section-heading { font-size: 1.65rem; }
+  .about-why-title { font-size: 1.65rem; }
+}
+
+@media (max-width: 600px) {
+  .about-hero { padding: 48px 0; }
+  .about-hero-title { font-size: 1.5rem; }
+  .about-hero-subtext { font-size: 0.95rem; }
+
+  .about-who,
+  .about-story,
+  .about-offer,
+  .about-why,
+  .about-visit { padding: 48px 0; }
+
+  .about-offer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-visit-map { height: 260px; }
+}
