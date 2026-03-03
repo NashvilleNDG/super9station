@@ -5,8 +5,9 @@
   var nav = document.querySelector('.nav');
   if (menuToggle && nav) {
     menuToggle.addEventListener('click', function () {
-      nav.classList.toggle('is-open');
-      menuToggle.classList.toggle('is-open');
+      var isOpen = nav.classList.toggle('is-open');
+      menuToggle.classList.toggle('is-open', isOpen);
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
     });
   }
 
